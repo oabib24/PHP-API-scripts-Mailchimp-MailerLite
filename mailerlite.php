@@ -1,4 +1,4 @@
-#!/usr/bin/php
+#!/usr/local/bin/php
 <?php
 
 error_reporting(0);
@@ -36,7 +36,7 @@ if ($optin != null && $email != null) {
         CURLOPT_POST => true,
         CURLOPT_HTTPHEADER => array(
             "Content-Type: application/json",
-            "Authorization: Bearer $apiKey"
+            "Authorization: Bearer ".$apiKey
         ),
         CURLOPT_POSTFIELDS => $data,
     ));
